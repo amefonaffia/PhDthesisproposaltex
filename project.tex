@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%% file project.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a personal template file used for PhD Thesis Project          
+%
+% You can copy it to a new file with a new name and use it as the 
+% basis for your thesis proposal, or use it this way. 
+% Delete % signs as needed.
+%
+% This template includes a few options for the layout, feel free 
+% to edit as you like
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{extarticle}
+
+% LIST OF PACKAGES:
+% Insert here calls for the packages your document requires
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{longtable} %used when table extents to another page
+\usepackage{mdframed}
+
+\usepackage{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+% LIST OF DEFINITIONS:
+% -----------RQ DEFINITION START--------------------------
+\mdfdefinestyle{RQFrame}{
+ outerlinewidth=0pt,
+ skipabove=0pt,
+ skipbelow=0pt,
+ innertopmargin=6pt,
+ innerbottommargin=0pt,
+ linewidth=0pt,
+ topline=false,
+ rightline=false,
+ leftline=false,
+ innerrightmargin=4pt,
+ innerleftmargin=4pt}
+
+\newcounter{RQCounter}
+\newcommand{\RQ}[2]{
+\refstepcounter{RQCounter} \label{#1}
+\begin{mdframed}[style=RQFrame]\noindent
+    \textbf{RQ}$_{\arabic{RQCounter}}$.~\emph{#2}
+\end{mdframed}
+}
+\newcommand{\hr}[1]{\textbf{RQ}$_{\ref{#1}}$}
+\definecolor{Gray}{gray}{0.9}
+\newcommand{\mysubsec}[1]{\smallskip \emph{\textbf{#1.}}}
+% ------------RQ DEFINITION END---------------------------
+
+%document begins here
+
+\begin{document}
+\begin{titlepage}
+\title{\textbf{TITLE}}%place thesis title here
+
+\author{\Large{PhD Thesis Project}
+\\
+\\
+\\
+\\
+\\
+\LARGE{\textbf{Applicant}}
+\\
+\\
+\large{NAME} %your name here
+\\
+\\
+\\
+\\
+\LARGE{\textbf{Supervisors}}
+\\
+\\
+\large{NAME} %supervisors name here
+\\
+%\large{NAME02 }  %-- Optional, remove sign if needed
+\\
+\\
+\\
+\\
+}
+\date{\hfill Month, Year}
+
+\clearpage\maketitle
+\thispagestyle{empty}
+
+\end{titlepage}
+
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\end{abstract}
+
+\section{Introduction}
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt
+\cite{telles2019standard,dhillon2016fundamentals}. %How to do multiple citations
+
+\section{Problem Statement}
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\cite{rabevohitra2019text} %How to cite
+
+\section{Research Questions}
+
+\RQ{RQ1}{vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?}% usage is \hr{RQ1}
+\RQ{RQ2}{ nisi ut aliquid ex ea commodi consequatur?}
+\RQ{RQ3}{ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.?}
+
+See usage for referable research questions \hr{RQ1}, \hr{RQ2}, and \hr{RQ3}. 
+
+\section{Research Methods}
+This section introduces the research methods to be used for this thesis project.
+\subsection{Literature review/State-of-the-Art}
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+
+\subsection{Case Study Design}
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+
+
+\section{Related Work}
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+
+\section{Expectations Towards the Results}
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+
+%\newpage
+
+\section{Year by Year Study Plans and Activities}
+The plans and activities for the PhD study is listed in Table \ref{tab:yearplan} below.
+
+\begin{longtable}[H]{|p{0.05\linewidth}|p{0.9\linewidth}|}
+    \hline
+    Year & Activities\\
+    \hline
+   1 & - Et harum quidem rerum facilis est et expedita distinctio.  \newline
+   - Et harum quidem rerum facilis est et expedita distinctio. \newline
+   - Et harum quidem rerum facilis est et expedita distinctio. \\ 
+    \hline
+    \hline
+   2 & - Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. \newline
+   - Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.\\ 
+    \hline
+    \hline
+   3 & - Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. \newline
+   - Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam. \\ 
+    \hline
+    
+\caption{Year by Year Study Plan and Activities} \label{tab:yearplan}
+\end{longtable}
+
+%\newpage
+\section{Applicant preparedness and ability to implement the doctoral project}
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+
+\bibliographystyle{splncs}
+\bibliography{ref}
+
+\end{document}
